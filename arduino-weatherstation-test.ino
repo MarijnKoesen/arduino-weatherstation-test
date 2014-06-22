@@ -10,6 +10,23 @@
 // Connect the bs18b20's as shown here: http://bildr.org/2011/07/ds18b20-arduino/
 // and http://www.strangeparty.com/2010/12/13/arduino-1-wire-temperature-sensors/
 //
+// Upload this to your arduino and everysecond the arduino will output the current
+// temperature from all sensors in the JSON format so you can easily parse and 
+// process this in any language you want:
+//
+// $ cat /dev/ttyACM0
+// {"sensor": "oneWire0", "temperature": 24.94}
+// {"sensor": "oneWire1", "temperature": 25.00}
+// {"sensor": "bmp180", "temperature": 25.50, "pressure": 1026.44}
+// 
+// {"sensor": "oneWire0", "temperature": 24.94}
+// {"sensor": "oneWire1", "temperature": 25.00}
+// {"sensor": "bmp180", "temperature": 25.50, "pressure": 1026.43}
+// [..]
+// 
+//
+// Extra info:
+// 
 // OneWire and DallasTemperature libraries from
 //   http://milesburton.com/index.php?title=Dallas_Temperature_Control_Library
 // Code based on examples from above and at
